@@ -1,0 +1,17 @@
+# dvc
+dvc
+dvc[gdrive]
+dvc[s3]
+
+# other important libs
+pandas
+scikit-learn
+
+# testing 
+pytest
+tox
+flake8 
+
+# webapp
+flask
+streamlit
