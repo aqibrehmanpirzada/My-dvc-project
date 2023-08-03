@@ -1,0 +1,18 @@
+base:
+  project: My-dvc-project
+  random_state: 42
+  target_col: quality
+  test_size: 0.2
+
+data_source:
+  s3_source: https://data-set-mine.s3.us-west-2.amazonaws.com/world-data-2023.csv
+
+artifacts:
+  artifacts_dir: artifacts
+  raw_local_data_dir: artifacts/raw_local_data_dir
+  raw_local_data: artifacts/raw_local_data_dir/data.csv
+
+split_data:  
+  processed_data_dir: artifacts/processed_data_dir
+  train_path: artifacts/processed_data_dir/train.csv
+  test_path: artifacts/processed_data_dir/test.csv

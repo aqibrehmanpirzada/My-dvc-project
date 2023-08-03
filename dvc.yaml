@@ -1,0 +1,27 @@
+stages: 
+  load_data:
+    cmd: python3 src/stage1_load_and_save.py --config=params.yaml
+    deps:
+      - src/stage1_load_and_save.py
+    params:
+      - data_source.s3_source
+      - artifacts.raw_local_data
+    outs:
+      - artifacts/raw_local_data_dir/data.csv
+  split_data:
+    cmd: python3 src/stage2_split_data.py  --config=params.yaml 
+    deps: 
+      - src/stage2_split_data.py 
+      - artifacts/raw_local_data_dir/data.csv
+    params: 
+      - base.random_state
+      - base.test_size
+      # - artifacts.raw_local_data
+      # - artifacts.split_data.processed_data_dir
+      # - artifacts.split_data.train_path
+      # - artifacts.split_data.test_path
+
+    outs:
+      - artifacts/processed_data_dir/train.csv
+      - artifacts/processed_data_dir/test.csv
+      

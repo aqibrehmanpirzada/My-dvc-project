@@ -1,0 +1,16 @@
+-e .
+# DVC
+dvc
+dvc[gdrive]
+dvc[s3]
+# Other Useful Libraries
+scikit-learn
+pandas
+
+# Testing
+pytest
+tox
+flake8
+# Webapp
+flask
+streamlit

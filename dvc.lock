@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  load_data:
+    cmd: python3 src/stage1_load_and_save.py --config=params.yaml
+    deps:
+    - path: src/stage1_load_and_save.py
+      hash: md5
+      md5: 74592c7e07aa30630bd8e4c51ea25996
+      size: 1069
+    params:
+      params.yaml:
+        artifacts.raw_local_data: artifacts/raw_local_data_dir/data.csv
+        data_source.s3_source: https://data-set-mine.s3.us-west-2.amazonaws.com/world-data-2023.csv
+    outs:
+    - path: artifacts/raw_local_data_dir/data.csv
+      hash: md5
+      md5: 99d2cce4c6c2b58c25901f16ba47d22c
+      size: 51616
