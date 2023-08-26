@@ -1,0 +1,14 @@
+
+daal4py
+dtale
+imbalanced-learn
+mediapipe
+neuralprophet
+numba
+plotly-resampler
+scann
+scipy
+tensorflow
+tensorflowjs
+tflite-model-maker
+tflite-support
