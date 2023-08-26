@@ -5,7 +5,7 @@ base:
   test_size: 0.2
 
 data_source:
-  s3_source: https://data-set-mine.s3.us-west-2.amazonaws.com/world-data-2023.csv
+  s3_source: https://data-set-mine.s3.us-west-2.amazonaws.com/Mobile+Price+Classification.csv
 
 artifacts:
   artifacts_dir: artifacts
@@ -16,3 +16,9 @@ split_data:
   processed_data_dir: artifacts/processed_data_dir
   train_path: artifacts/processed_data_dir/train.csv
   test_path: artifacts/processed_data_dir/test.csv
+reports:
+  reports_dir: artifacts/report
+  params: artifacts/report/params.json
+  scores: artifacts/report/scores.json
+model_dir: artifacts/saved_models
+model_path: artifacts/saved_models/models.joblib
